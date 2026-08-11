@@ -1,0 +1,13 @@
+# Python/OS
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Large research papers
+*.pdf
+
+# Local IDEs / System
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

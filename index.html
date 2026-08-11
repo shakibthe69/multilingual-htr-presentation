@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multilingual Handwritten Text Recognition System</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="presentation-container">
+        <!-- Progress Bar -->
+        <div class="progress-container">
+            <div class="progress-bar" id="progressBar"></div>
+        </div>
+
+        <!-- Slides Wrapper -->
+        <div class="slides-wrapper" id="slidesWrapper">
+
+            <!-- SLIDE 1: TITLE -->
+            <section class="slide active" id="slide-1">
+                <div class="slide-content title-slide">
+                    <div class="title-left">
+                        <span class="badge">Research Proposal &bull; CSE FYDP</span>
+                        <h1>Multilingual Handwritten<br><span class="gradient-text">Text Recognition</span></h1>
+                        <p class="subtitle">Bangla &bull; English &bull; Digits &bull; Symbols</p>
+                        <p class="tagline">Converting handwritten images into editable digital text.</p>
+                        
+                        <div class="project-meta">
+                            <div class="team-section">
+                                <h3>Prepared By:</h3>
+                                <p class="team-member">Team Members &bull; IDs</p>
+                            </div>
+                            <div class="dept-section">
+                                <p>Department of Computer Science & Engineering</p>
+                                <p class="univ">University Name</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="title-right">
+                        <div class="pipeline-card">
+                            <div class="transform-pipeline">
+                                <div class="flow-step hw-step">
+                                    <span class="step-label">Handwritten Input</span>
+                                    <div class="handwriting-samples">
+                                        <div class="sample-item ban">বাংলা</div>
+                                        <div class="sample-item eng">Hello</div>
+                                        <div class="sample-item dig">2026</div>
+                                        <div class="sample-item sym">@ + =</div>
+                                    </div>
+                                </div>
+                                <div class="flow-arrow">
+                                    <svg viewBox="0 0 24 24" width="24" height="24">
+                                        <path fill="currentColor" d="M8.59,16.59L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.59Z" />
+                                    </svg>
+                                </div>
+                                <div class="flow-step ai-step">
+                                    <div class="ai-node">
+                                        <div class="pulse-ring"></div>
+                                        <svg class="ai-icon" viewBox="0 0 24 24" width="36" height="36">
+                                            <path fill="currentColor" d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M12,4A2,2 0 0,1 14,6A2,2 0 0,1 12,8A2,2 0 0,1 10,6A2,2 0 0,1 12,4M12,18A2,2 0 0,1 10,16A2,2 0 0,1 12,14A2,2 0 0,1 14,16A2,2 0 0,1 12,18M16,11.5A1.5,1.5 0 0,1 17.5,13A1.5,1.5 0 0,1 16,14.5A1.5,1.5 0 0,1 14.5,13A1.5,1.5 0 0,1 16,11.5M8,11.5A1.5,1.5 0 0,1 9.5,13A1.5,1.5 0 0,1 8,14.5A1.5,1.5 0 0,1 6.5,13A1.5,1.5 0 0,1 8,11.5Z" />
+                                        </svg>
+                                        <span>AI Model</span>
+                                    </div>
+                                </div>
+                                <div class="flow-arrow">
+                                    <svg viewBox="0 0 24 24" width="24" height="24">
+                                        <path fill="currentColor" d="M8.59,16.59L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.59Z" />
+                                    </svg>
+                                </div>
+                                <div class="flow-step digital-step">
+                                    <span class="step-label">Digital Text</span>
+                                    <div class="digital-samples">
+                                        <div class="digital-item">বাংলা</div>
+                                        <div class="digital-item">Hello</div>
+                                        <div class="digital-item">2026</div>
+                                        <div class="digital-item">@ + =</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SLIDE 2: PROBLEM & MOTIVATION -->
+            <section class="slide" id="slide-2">
+                <div class="slide-content">
+                    <span class="slide-badge">Motivation</span>
+                    <h2 class="slide-title">Why Handwriting Recognition?</h2>
+                    
+                    <div class="split-layout">
+                        <!-- Left Side: Problem -->
+                        <div class="grid-card problem-card">
+                            <h3 class="card-heading text-red"><span class="icon">⚠️</span> Complex Handwriting Challenge</h3>
+                            <div class="handwriting-preview">
+                                <div class="scribble-bg"></div>
+                                <span class="scribble-text">আমার নাম Shakib, ID: 202012345</span>
+                            </div>
+                            <ul class="bullet-list">
+                                <li><strong>Complex writing styles</strong> &bull; unique curves & strokes</li>
+                                <li><strong>Noise & distortion</strong> &bull; smudges, low contrast, folds</li>
+                                <li><strong>Mixed scripts</strong> &bull; languages interwoven together</li>
+                            </ul>
+                        </div>
+
+                        <!-- Right Side: Example -->
+                        <div class="grid-card example-card">
+                            <h3 class="card-heading text-cyan"><span class="icon">📑</span> Real-World Multilingual Sample</h3>
+                            <div class="sample-display">
+                                <div class="sample-line">আমার নাম <span class="hl-bangla">Shakib</span></div>
+                                <div class="sample-line">ID: <span class="hl-digit">202012345</span></div>
+                                <div class="sample-line">Total = <span class="hl-digit">500</span> + <span class="hl-digit">200</span></div>
+                                <div class="sample-line">Email: <span class="hl-symbol">shakib@gmail.com</span></div>
+                            </div>
+                            <div class="arrow-down-indicator">
+                                <span>&darr;</span> One document, multiple character types
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bottom-bar">
+                        <div class="warning-alert">
+                            <strong>Limitation:</strong> Existing systems are often language- or task-specific.
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SLIDE 3: OBJECTIVES & SCOPE -->
+            <section class="slide" id="slide-3">
+                <div class="slide-content">
+                    <span class="slide-badge">Objectives & Scope</span>
+                    <h2 class="slide-title">What Are We Building?</h2>
+
+                    <div class="four-cards-grid">
+                        <div class="scope-card">
+                            <div class="card-icon">🇧🇩</div>
+                            <h3>Bangla</h3>
+                            <p>Handwritten Bangla recognition</p>
+                        </div>
+                        <div class="scope-card">
+                            <div class="card-icon">🔤</div>
+                            <h3>English</h3>
+                            <p>Uppercase & lowercase letters</p>
+                        </div>
+                        <div class="scope-card">
+                            <div class="card-icon">🔢</div>
+                            <h3>Digits</h3>
+                            <p>0–9 English & Bengali digits</p>
+                        </div>
+                        <div class="scope-card">
+                            <div class="card-icon">🔣</div>
+                            <h3>Symbols</h3>
+                            <p>@ # + &minus; = % etc.</p>
+                        </div>
+                    </div>
+
+                    <div class="core-goal-section">
+                        <div class="core-goal-badge">Core Goal</div>
+                        <p class="core-goal-text">One unified system &rarr; Multiple handwritten content types</p>
+                    </div>
+
+                    <div class="scope-split">
+                        <div class="scope-box in-scope">
+                            <h4>IN SCOPE</h4>
+                            <ul>
+                                <li>Image-based HTR</li>
+                                <li>Mixed script text segmentation</li>
+                                <li>Editable text formats (.txt, .json)</li>
+                                <li>Performance evaluation</li>
+                            </ul>
+                        </div>
+                        <div class="scope-box out-scope">
+                            <h4>OUT OF SCOPE (THIS TRIMESTER)</h4>
+                            <ul>
+                                <li>Full commercial deployment</li>
+                                <li>Perfect recognition (100% accuracy)</li>
+                                <li>Mobile app distribution</li>
+                                <li>Document structure layout parsing</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SLIDE 4: EXISTING WORK / LITERATURE -->
+            <section class="slide" id="slide-4">
+                <div class="slide-content">
+                    <span class="slide-badge">Literature Review</span>
+                    <h2 class="slide-title">What Already Exists?</h2>
+
+                    <div class="timeline-container">
+                        <!-- Stage 1 -->
+                        <div class="timeline-node">
+                            <div class="node-number">01</div>
+                            <div class="node-content">
+                                <h3>Traditional HTR</h3>
+                                <p class="node-desc">CNN + RNN + CTC</p>
+                                <div class="node-pipeline">
+                                    <span>CNN</span> &rarr; <span>LSTM</span> &rarr; <span>Text</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Stage 2 -->
+                        <div class="timeline-node">
+                            <div class="node-number">02</div>
+                            <div class="node-content">
+                                <h3>Transformer OCR</h3>
+                                <p class="node-desc">Transformer-based models</p>
+                                <div class="node-pipeline">
+                                    <span>Image</span> &rarr; <span>Transformer</span> &rarr; <span>Text</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Stage 3 -->
+                        <div class="timeline-node highlighted">
+                            <div class="node-number">03</div>
+                            <div class="node-content">
+                                <h3>GraDeT-HTR (2025)</h3>
+                                <p class="node-desc">Bengali HTR baseline</p>
+                                <div class="node-pipeline">
+                                    <span>Image</span> &rarr; <span>Decoder-only</span> &rarr; <span>Bangla</span>
+                                </div>
+                                <div class="stats-badge-group">
+                                    <span class="stat-tag">87M Params</span>
+                                    <span class="stat-tag cer-tag">CER 6.19% on BN-HTRd</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="literature-footer">
+                        <div class="footer-direction">
+                            <span class="label">Our Direction:</span>
+                            <span class="value">Extend multilingual recognition &rarr; <strong>Unified HTR</strong> (Bangla + English + Digits + Symbols)</span>
+                        </div>
+                        <div class="citation">
+                            * Citation: GraDeT-HTR (2025) Bengali Handwriting Recognition. Parameters and CER cited from original publication benchmarks.
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SLIDE 5: PROPOSED APPROACH -->
+            <section class="slide" id="slide-5">
+                <div class="slide-content">
+                    <span class="slide-badge">Methodology</span>
+                    <h2 class="slide-title">Proposed Recognition Pipeline</h2>
+
+                    <div class="pipeline-flow">
+                        <div class="pipeline-item">
+                            <div class="pipeline-icon">🖼️</div>
+                            <h4>Input Image</h4>
+                        </div>
+                        <div class="pipeline-arrow">&rarr;</div>
+                        
+                        <div class="pipeline-item">
+                            <div class="pipeline-icon">⚙️</div>
+                            <h4>Preprocessing</h4>
+                        </div>
+                        <div class="pipeline-arrow">&rarr;</div>
+
+                        <div class="pipeline-item">
+                            <div class="pipeline-icon">🔍</div>
+                            <h4>Line Detection</h4>
+                        </div>
+                        <div class="pipeline-arrow">&rarr;</div>
+
+                        <div class="pipeline-item">
+                            <div class="pipeline-icon">🧬</div>
+                            <h4>Feature Extraction</h4>
+                        </div>
+                        <div class="pipeline-arrow">&rarr;</div>
+
+                        <div class="pipeline-item model-highlight">
+                            <div class="pipeline-icon">🧠</div>
+                            <h4>Recognition Model</h4>
+                            <div class="model-variants">
+                                <div class="variant">CNN + BiLSTM + CTC</div>
+                                <div class="variant secondary">Transformer Model</div>
+                            </div>
+                            <span class="baseline-tag">Baseline &rarr; Advanced</span>
+                        </div>
+                        <div class="pipeline-arrow">&rarr;</div>
+
+                        <div class="pipeline-item">
+                            <div class="pipeline-icon">🪙</div>
+                            <h4>Tokenization</h4>
+                        </div>
+                        <div class="pipeline-arrow">&rarr;</div>
+
+                        <div class="pipeline-item">
+                            <div class="pipeline-icon">🔠</div>
+                            <h4>Digital Text</h4>
+                        </div>
+                    </div>
+
+                    <div class="pipeline-note">
+                        <p><strong>Experimental Comparison:</strong> We will compare connectionist temporal classification (CTC) baselines against modern encoder-decoder attention models.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SLIDE 6: DATA + TECHNOLOGY -->
+            <section class="slide" id="slide-6">
+                <div class="slide-content">
+                    <span class="slide-badge">Resources & Tech</span>
+                    <h2 class="slide-title">Data & Technology Stack</h2>
+
+                    <div class="split-layout">
+                        <!-- Left: Data -->
+                        <div class="grid-card">
+                            <h3 class="card-heading text-cyan"><span class="icon">📊</span> Training Datasets</h3>
+                            <div class="datasets-grid">
+                                <div class="dataset-item">
+                                    <span class="ds-flag">🇧🇩</span>
+                                    <div>
+                                        <strong>Bangla HTR</strong>
+                                        <p>BN-HTRd & Ishra</p>
+                                    </div>
+                                </div>
+                                <div class="dataset-item">
+                                    <span class="ds-flag">🔤</span>
+                                    <div>
+                                        <strong>IAM Dataset</strong>
+                                        <p>English script</p>
+                                    </div>
+                                </div>
+                                <div class="dataset-item">
+                                    <span class="ds-flag">🔢</span>
+                                    <div>
+                                        <strong>Digits</strong>
+                                        <p>MNIST / NumtaDB</p>
+                                    </div>
+                                </div>
+                                <div class="dataset-item">
+                                    <span class="ds-flag">🔣</span>
+                                    <div>
+                                        <strong>Symbols</strong>
+                                        <p>Custom Math/Special</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="augmentation-box">
+                                <strong>Augmentation:</strong> Rotation, blur, noise addition, and elastic scaling to simulate varying handwriting styles.
+                            </div>
+                        </div>
+
+                        <!-- Right: Tech Stack -->
+                        <div class="grid-card tech-card-bg">
+                            <h3 class="card-heading text-purple"><span class="icon">💻</span> Technical Environment</h3>
+                            <div class="tech-grid">
+                                <div class="tech-item">
+                                    <div class="tech-icon-circle python">Py</div>
+                                    <span>Python</span>
+                                </div>
+                                <div class="tech-item">
+                                    <div class="tech-icon-circle pytorch">Pt</div>
+                                    <span>PyTorch</span>
+                                </div>
+                                <div class="tech-item">
+                                    <div class="tech-icon-circle opencv">Cv</div>
+                                    <span>OpenCV</span>
+                                </div>
+                                <div class="tech-item">
+                                    <div class="tech-icon-circle numpy">Np</div>
+                                    <span>NumPy</span>
+                                </div>
+                                <div class="tech-item">
+                                    <div class="tech-icon-circle fastapi">Fa</div>
+                                    <span>FastAPI</span>
+                                </div>
+                                <div class="tech-item">
+                                    <div class="tech-icon-circle react">Re</div>
+                                    <span>React UI</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SLIDE 7: DELIVERABLES & EVALUATION -->
+            <section class="slide" id="slide-7">
+                <div class="slide-content">
+                    <span class="slide-badge">Deliverables & Metrics</span>
+                    <h2 class="slide-title">How Will We Know It Works?</h2>
+
+                    <div class="split-layout deliverables-metrics-layout">
+                        <!-- Deliverables -->
+                        <div class="deliverables-section">
+                            <h3>Key Deliverables</h3>
+                            <div class="deliverables-list">
+                                <div class="deliv-card">
+                                    <span class="deliv-icon">📦</span>
+                                    <div>
+                                        <h4>Unified Dataset</h4>
+                                        <p>Cleaned multilingual dataset</p>
+                                    </div>
+                                </div>
+                                <div class="deliv-card">
+                                    <span class="deliv-icon">🧠</span>
+                                    <div>
+                                        <h4>Trained Model</h4>
+                                        <p>Exported weights (.pt/.onnx)</p>
+                                    </div>
+                                </div>
+                                <div class="deliv-card">
+                                    <span class="deliv-icon">🌐</span>
+                                    <div>
+                                        <h4>Web Application</h4>
+                                        <p>Interactive UI & inference endpoint</p>
+                                    </div>
+                                </div>
+                                <div class="deliv-card">
+                                    <span class="deliv-icon">📄</span>
+                                    <div>
+                                        <h4>Research Report</h4>
+                                        <p>Documentation & analysis</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Metrics & Table -->
+                        <div class="metrics-section">
+                            <h3>Evaluation Benchmarks</h3>
+                            <div class="metrics-grid">
+                                <div class="metric-mini-card">
+                                    <h4>CER</h4>
+                                    <p>Character Error Rate</p>
+                                </div>
+                                <div class="metric-mini-card">
+                                    <h4>WER</h4>
+                                    <p>Word Error Rate</p>
+                                </div>
+                                <div class="metric-mini-card">
+                                    <h4>Accuracy</h4>
+                                    <p>Sequence Accuracy</p>
+                                </div>
+                                <div class="metric-mini-card">
+                                    <h4>Speed</h4>
+                                    <p>Inference Latency</p>
+                                </div>
+                            </div>
+
+                            <table class="benchmark-table">
+                               <thead>
+                                   <tr>
+                                       <th>Content Category</th>
+                                       <th>Primary Evaluation Metrics</th>
+                                   </tr>
+                               </thead>
+                               <tbody>
+                                   <tr>
+                                       <td>Bangla script</td>
+                                       <td>CER / Character Accuracy</td>
+                                   </tr>
+                                   <tr>
+                                       <td>English script</td>
+                                       <td>CER / Character Accuracy</td>
+                                   </tr>
+                                   <tr>
+                                       <td>Digits (Bengali & English)</td>
+                                       <td>Sequence Accuracy</td>
+                                   </tr>
+                                   <tr>
+                                       <td>Symbols</td>
+                                       <td>Symbol Recognition Accuracy</td>
+                                   </tr>
+                                   <tr>
+                                       <td>Mixed scripts</td>
+                                       <td>CER / WER / Edit Distance</td>
+                                   </tr>
+                               </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SLIDE 8: USE OF AI ASSISTANTS -->
+            <section class="slide" id="slide-8">
+                <div class="slide-content">
+                    <span class="slide-badge">Academic Integrity</span>
+                    <h2 class="slide-title">How We Use AI Assistants</h2>
+
+                    <div class="ai-use-layout">
+                        <!-- Circle workflow left -->
+                        <div class="ai-workflow-container">
+                            <div class="workflow-circle">
+                                <div class="node-c c-1">Research</div>
+                                <div class="node-c c-2">AI Help</div>
+                                <div class="node-c c-3">Human Verify</div>
+                                <div class="node-c c-4">Implement</div>
+                                <div class="node-c c-5">Testing</div>
+                                <div class="circle-center">Human<br>In Control</div>
+                            </div>
+                        </div>
+
+                        <!-- Assist areas right -->
+                        <div class="ai-assist-details">
+                            <div class="assist-grid">
+                                <div class="assist-item">
+                                    <h4>🔎 Literature Search</h4>
+                                    <p>Finding related architecture paradigms</p>
+                                </div>
+                                <div class="assist-item">
+                                    <h4>💻 Development</h4>
+                                    <p>Debugging models, formatting pipelines</p>
+                                </div>
+                                <div class="assist-item">
+                                    <h4>📊 Analysis</h4>
+                                    <p>Structuring evaluation metrics</p>
+                                </div>
+                                <div class="assist-item">
+                                    <h4>📝 Writing</h4>
+                                    <p>Formatting reports and presentation layout</p>
+                                </div>
+                            </div>
+
+                            <div class="highlight-alert-box">
+                                <strong>Important:</strong> AI assists the development process &mdash; final decisions, execution, experiment validation, and analysis remain our responsibility.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SLIDE 9: VISION (FINAL SLIDE) -->
+            <section class="slide" id="slide-9">
+                <div class="slide-content vision-slide">
+                    <span class="slide-badge">Looking Forward</span>
+                    <h2 class="slide-title">From Handwriting to Digital Intelligence</h2>
+
+                    <div class="vertical-pipeline">
+                        <div class="v-step">
+                            <span class="v-icon">✍️</span>
+                            <span class="v-text">Handwritten Page</span>
+                        </div>
+                        <div class="v-connector"></div>
+                        <div class="v-step">
+                            <span class="v-icon">👁️</span>
+                            <span class="v-text">AI Vision</span>
+                        </div>
+                        <div class="v-connector"></div>
+                        <div class="v-step">
+                            <span class="v-icon">🧠</span>
+                            <span class="v-text">HTR Model</span>
+                        </div>
+                        <div class="v-connector"></div>
+                        <div class="v-step">
+                            <span class="v-icon">💻</span>
+                            <span class="v-text">Digital Editable Text</span>
+                        </div>
+                    </div>
+
+                    <div class="vision-tagline">
+                        <h3>One system for multilingual handwritten text.</h3>
+                        <p>Bangla &bull; English &bull; Digits &bull; Symbols</p>
+                    </div>
+
+                    <div class="thank-you">
+                        <p>Thank You &bull; Questions?</p>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+
+        <!-- Navigation Controls -->
+        <div class="controls-overlay">
+            <button id="prevBtn" class="control-btn" disabled>&larr; Prev</button>
+            <span class="slide-number-display" id="slideNum">Slide 1 / 9</span>
+            <button id="nextBtn" class="control-btn">Next &rarr;</button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
