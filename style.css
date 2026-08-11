@@ -1199,3 +1199,22 @@ h1, h2, h3, h4, .font-heading {
         transform: translateX(4px);
     }
 }
+
+/* Author Tag styling */
+.author-tag {
+    position: absolute;
+    bottom: 20px;
+    right: 24px;
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    opacity: 0.6;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    pointer-events: none;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    background: rgba(255, 255, 255, 0.02);
+    padding: 4px 10px;
+    border-radius: 4px;
+}
+

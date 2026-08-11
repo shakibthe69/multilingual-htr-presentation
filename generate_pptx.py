@@ -28,6 +28,17 @@ def create_presentation():
         fill = background.fill
         fill.solid()
         fill.fore_color.rgb = c_navy
+        
+        # Add "Built by Shakib" author tag to bottom right corner
+        author_box = slide.shapes.add_textbox(Inches(10.5), Inches(6.9), Inches(2.25), Inches(0.4))
+        tf = author_box.text_frame
+        p = tf.paragraphs[0]
+        p.text = "BUILT BY SHAKIB"
+        p.alignment = PP_ALIGN.RIGHT
+        p.font.size = Pt(8.5)
+        p.font.color.rgb = c_secondary
+        p.font.bold = True
+        p.font.name = 'Trebuchet MS'
 
     # Helper to add standard slide header
     def add_header(slide, title_text, category_text=None):
