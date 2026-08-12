@@ -84,7 +84,7 @@ def create_presentation():
     
     # Badge
     p_badge = tf1.paragraphs[0]
-    p_badge.text = "RESEARCH PROPOSAL • CSE FYDP"
+    p_badge.text = "RESEARCH PROJECT • CSE"
     p_badge.font.size = Pt(11)
     p_badge.font.bold = True
     p_badge.font.color.rgb = c_purple
@@ -114,12 +114,12 @@ def create_presentation():
     p_tag.font.name = 'Arial'
     
     # Meta Info (Bottom Left)
-    meta_box = slide1.shapes.add_textbox(Inches(0.8), Inches(5.5), Inches(6.5), Inches(1.5))
+    meta_box = slide1.shapes.add_textbox(Inches(0.8), Inches(5.1), Inches(6.5), Inches(2.0))
     tf_meta = meta_box.text_frame
     tf_meta.word_wrap = True
     p_meta = tf_meta.paragraphs[0]
-    p_meta.text = "PREPARED BY:\nTeam Members & IDs\n\nDepartment of Computer Science & Engineering\nUniversity Name"
-    p_meta.font.size = Pt(11)
+    p_meta.text = "PREPARED BY:\nMD SHAKIB AHMED (112230862)  •  Md Fahad Molla (112230890)\nMuhammad Yeakub (112231003)  •  Md. Imjam Hosen (112230335)\n\nDepartment of Computer Science & Engineering\nUnited International University"
+    p_meta.font.size = Pt(10)
     p_meta.font.color.rgb = c_secondary
     p_meta.font.name = 'Arial'
 
